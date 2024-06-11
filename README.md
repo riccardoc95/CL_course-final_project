@@ -1,5 +1,5 @@
 # Final project - CL course 
-The complete project report is available in [pdf format](https://github.com/riccardoc95/CL_course-final_project/blob/main/overleaf/Progetto_CL.pdf).
+The complete project report is available in [pdf format](https://github.com/riccardoc95/CL_course-final_project/blob/main/overleaf/Progetto_CL.pdf) and [here](https://github.com/riccardoc95/CL_course-final_project/blob/main/main.ipynb) the notebook code.
 
 ## Intro
 This project aims to develop a generative replay method for continual learning using Generative Adversarial Networks (GANs) as the generative model. The goal is to evaluate this method in a class-incremental learning scenario, where the MNIST dataset is divided into five tasks, each containing two classes. This approach addresses the challenge of catastrophic forgetting by generating replay samples for previously learned tasks, allowing the model to retain knowledge over time.
