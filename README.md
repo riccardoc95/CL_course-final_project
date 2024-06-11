@@ -26,3 +26,10 @@ To improve the accuracy of the presented architecture, several enhancements can 
 
 Furthermore, memory efficiency can be improved by generating GAN samples in batches rather than all at once. This method enables processing each batch with the classifier sequentially, thereby allowing a large number of samples to be generated without significantly impacting memory usage.
 
+## Conclusions
+The generative replay method utilizing GANs for continual learning was implemented and evaluated on the MNIST dataset in a class-incremental learning scenario. The dataset was split into five tasks, each containing two classes. The evaluation focused on three key metrics: average accuracy, FWT, and BWT.
+
+The results indicate that the generative replay method can mitigate catastrophic forgetting and maintain performance across multiple tasks. The average accuracy demonstrates the model's overall competence, while the FWT and BWT metrics provide insights into the transfer of knowledge between tasks. 
+
+The approach has some downsides, including computational overhead from generating replay samples and potential instability in GAN training. Future improvements could focus on enhancing memory and computational efficiency, such as using sample compression, selective storage, efficient GAN architectures, hybrid approaches, and incremental learning techniques.
+
