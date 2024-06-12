@@ -1,6 +1,8 @@
 \documentclass{article}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{biblatex} %Imports biblatex package
+\addbibresource{sample.bib} %Import the bibliography file
 
 \title{Report for Deep Generative view on Continual Learning
 Project\\[1cm]Riccardo Ceccaroni}
@@ -10,9 +12,9 @@ Project\\[1cm]Riccardo Ceccaroni}
 
 
 \section{Introduction}
-This project aims to develop a generative replay method for continual learning using Generative Adversarial Networks (GANs) as the generative model. The goal is to evaluate this method in a class-incremental learning scenario, where the MNIST dataset is divided into five tasks, each containing two classes. This approach addresses the challenge of catastrophic forgetting by generating replay samples for previously learned tasks, allowing the model to retain knowledge over time.
+This project aims to develop a generative replay method for continual learning using Generative Adversarial Networks (GANs) as the generative model \cite{Goodfellow2014GAN}. The goal is to evaluate this method in a class-incremental learning scenario, where the MNIST dataset \cite{LeCun1998MNIST} is divided into five tasks, each containing two classes. This approach addresses the challenge of catastrophic forgetting by generating replay samples for previously learned tasks, allowing the model to retain knowledge over time \cite{Shin2017Continual, Wu2018MemoryReplay}.
 
-In a class-incremental scenario, the model sequentially learns new classes without revisiting old data. The generative replay method leverages GANs to produce samples from past tasks, which are then used during training on new tasks to maintain performance on earlier tasks. The effectiveness of this method will be assessed using three metrics: average accuracy, forward transfer (FWT), and backward transfer (BWT). 
+In a class-incremental scenario, the model sequentially learns new classes without revisiting old data. The generative replay method leverages GANs to produce samples from past tasks, which are then used during training on new tasks to maintain performance on earlier tasks. The effectiveness of this method will be assessed using three metrics: average accuracy, forward transfer (FWT), and backward transfer (BWT) \cite{LopezPaz2017GEM, Chaudhry2018RWalk, DiazRodriguez2018DONUT}. 
 
 \section{Methods}
 
@@ -147,5 +149,8 @@ The generative replay method utilizing GANs for continual learning was implement
 The results indicate that the generative replay method can mitigate catastrophic forgetting and maintain performance across multiple tasks. The average accuracy demonstrates the model's overall competence, while the FWT and BWT metrics provide insights into the transfer of knowledge between tasks. 
 
 The approach has some downsides, including computational overhead from generating replay samples and potential instability in GAN training. Future improvements could focus on enhancing memory and computational efficiency, such as using sample compression, selective storage, efficient GAN architectures, hybrid approaches, and incremental learning techniques.
+
+\printbibliography %Prints bibliography
+
 
 \end{document}
